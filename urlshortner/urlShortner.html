@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link rel="stylesheet" href="urlShortner.css" />
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="urlShortner.html">URL-SHORTNER</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="../urlShortnerChart/urlShortnerChart.html"
+							>Home <span class="sr-only">(current)</span></a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="urlShortner.html">URL Generator</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../urlShortnerTable/urlShortnerTable.html"
+							>Generated URLs</a
+						>
+					</li>
+				</ul>
+				<span class="navbar-text"><a href="" id="logout">Logout</a></span>
+			</div>
+		</nav>
+		<div
+			class="modal fade"
+			id="shortUrlModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="basicModal"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Shortened Url</h4>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" id="shortUrlLink"></div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-outline-dark"
+							data-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="alert alert-success fade show sucessfullLogin animated animate__fadeOutUp"
+		>
+			<strong>Successfully logged In!</strong> .
+		</div>
+		<div
+			class="alert alert-danger alert-dismissible fade show invalidUrl animated animate__fadeOutUp"
+			role="alert"
+		>
+			Invalid Url
+		</div>
+		<div
+			class="alert alert-success alert-dismissible fade show validUrl animated animate__fadeOutUp"
+			role="alert"
+		>
+			Short Url Generated
+		</div>
+
+		<div class="Form m-5 animated animate__lightSpeedInRight">
+			<div class="container">
+				<div
+					class="row no-gutters pt-5 shadow-lg justify-content-md-center p-4 overflow-auto"
+				>
+					<div class="col-12">
+						<div class="text animated animate__heartBeat p-2">
+							<u><h1>URL-Shortner</h1></u>
+						</div>
+						<form action="" onsubmit="return false" id="urlShortnerForm">
+							<div class="form-group">
+								<div
+									class="active-pink-3 active-pink-4 mb-4 p-2"
+									style="text-align: center; text-align: center"
+								>
+									<input
+										class="form-control"
+										type="text"
+										placeholder="Enter a valid Url"
+										aria-label="urlShortner"
+										id="urlInput"
+									/>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="align-center p-2">
+									<button
+										type="submit"
+										class="urlShortnerButton btn btn-outline-dark w-100 overflow-auto"
+										disabled
+									>
+										Generate Short Url
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script defer src="urlShortner.js"></script>
+	</body>
+</html>

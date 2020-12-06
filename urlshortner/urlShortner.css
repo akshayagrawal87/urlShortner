@@ -1,0 +1,61 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(219, 226, 226);
+	text-shadow: 1px;
+	font-family: "Architects Daughter", cursive;
+}
+.row {
+	background: white;
+	border-radius: 30px;
+	margin-top: 5em;
+	box-shadow: 5px 10px 20px rgb(151, 157, 160);
+}
+.row:hover {
+	box-shadow: 5px 14px rgb(210, 215, 218);
+}
+.active-pink-4 {
+	border-radius: 5px;
+}
+
+.active-pink-4 input[type="text"]:focus:not([readonly]) {
+	border: 1px solid #beabb2;
+	box-shadow: 0 0 0 1px #96aeb3a6;
+}
+input[type="text"] {
+	background: transparent;
+	border-color: #343a40;
+	text-align: center;
+}
+
+input[type="text"]::placeholder {
+	/* Firefox, Chrome, Opera */
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 4px;
+}
+
+.animated {
+	animation-duration: 2s;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+}
+
+.wobble {
+	animation-name: wobble;
+}
+.bounce {
+	animation-name: bounce;
+}
+.fadeout {
+	animation-name: animate__fadeOutUp;
+}
+
+.text {
+	text-align: center;
+	letter-spacing: 5px;
+}
