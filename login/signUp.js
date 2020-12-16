@@ -45,7 +45,7 @@ async function checkOnSubmit() {
 	let data = await response.json();
 
 	if (data.created) {
-		location.href = "index.html";
+		location.href = "../index.html";
 	} else {
 		let alertMesssge = document.querySelector(".alertMessage");
 		alertMesssge.innerHTML = data.message;
